@@ -1,0 +1,22 @@
+{
+  "name": "retro-brite-rebuild",
+  "version": "1.0.0",
+  "description": "The purpose of this application is to allow a user to create artwork and/or patterns by filling a grid with different colored cells.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AGraves78/retro-brite-rebuild.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AGraves78/retro-brite-rebuild/issues"
+  },
+  "homepage": "https://github.com/AGraves78/retro-brite-rebuild#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
