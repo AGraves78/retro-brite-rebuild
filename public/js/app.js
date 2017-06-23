@@ -25,17 +25,34 @@ makeGrid: function(){
 },
 cacheDOM: function(){
   this.root = document.querySelector(this.rootElement);
+  this.colorButtons = this.root.querySelectorAll('button.color');
+  this.gridOutput = this.root.querySelector('.grid-output');
 },
-bindEvents: function(){},
+bindEvents: function(){
+  this.colorButtons.forEach(btn => {
+    const newColor = btn.classList[1];
+    btn.addEventListener('click', () => this.setColor(newColor));
+  });
+},
+setColor: function(newColor){
+  this.selectedColor = newColor;
+},
+changeColor: function(rowIndex, colIndex){
+  const cell = this.grid[rowIndex][colIndex];
+  cell.color = this.selectedColor;
+  this.render();
+},
 render: function(){
-  this.grid.forEach(row => {
+  this.gridOutput.innerHTML = '';
+  this.grid.forEach((row, rowIndex) => {
     const rowContainer = document.createElement('div');
     rowContainer.style.height = `${this.cellHeight}px`;
-    row.forEach(cell => {
+    row.forEach((cell, colIndex) => {
       const element = cell.toHtml();
+      element.addEventListener('click', () => this.changeColor(rowIndex, colIndex));
       rowContainer.appendChild(element);
     });
-    this.root.appendChild(rowContainer);
+    this.gridOutput.appendChild(rowContainer);
   });
 }
 
