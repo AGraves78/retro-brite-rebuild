@@ -4,7 +4,8 @@
   "description": "The purpose of this application is to allow a user to create artwork and/or patterns by filling a grid with different colored cells.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
