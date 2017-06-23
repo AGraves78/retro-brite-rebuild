@@ -2,7 +2,7 @@
 function Cell(width, height, color){
   this.width = width || 100;
   this.height = height || 100;
-  this.color = color || 'red';
+  this.color = color || 'purple';
 }
 
 Cell.prototype.toHtml = function(){
