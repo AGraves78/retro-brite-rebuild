@@ -49,11 +49,6 @@ resetGrid: function(){
 },
 render: function(){
   this.gridOutput.innerHTML = '';
-  const resetButton = document.createElement('button');
-  resetButton.textContent = 'Reset';
-  resetButton.addEventListener('click', () => this.resetGrid());
-  this.gridOutput.appendChild(resetButton);
-  
   this.grid.forEach((row, rowIndex) => {
     const rowContainer = document.createElement('div');
     rowContainer.style.height = `${this.cellHeight}px`;
@@ -64,6 +59,11 @@ render: function(){
     });
     this.gridOutput.appendChild(rowContainer);
   });
+  const resetButton = document.createElement('button');
+  resetButton.textContent = 'Reset';
+  resetButton.addEventListener('click', () => this.resetGrid());
+  resetButton.style.margin = "16px";
+  this.gridOutput.appendChild(resetButton);
 }
 
 };
