@@ -10,7 +10,8 @@ Cell.prototype.toHtml = function(){
   div.style.height = `${this.height}px`;
   div.style.display = 'inline-block';
   div.style.width = `${this.width}px`;
-  div.style.border = '0.25px solid black';
+  div.style.border = '0.25px solid grey';
+  div.style.borderRadius = '50%';
   div.style.backgroundColor = this.color;
   return div;
 };

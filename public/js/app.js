@@ -1,9 +1,9 @@
 /* jshint esversion: 6*/
 const App = {
   rootElement: '#app',
-  selectedColor: 'white',
+  selectedColor: 'black',
   numRows: 20,
-  numCols: 20,
+  numCols: 25,
   cellWidth: 25,
   cellHeight: 25,
   grid: [],
@@ -43,7 +43,7 @@ changeColor: function(rowIndex, colIndex){
   this.render();
 },
 resetGrid: function(){
-  this.selectedColor = 'white';
+  this.selectedColor = 'black';
   this.makeGrid();
   this.render();
 },
